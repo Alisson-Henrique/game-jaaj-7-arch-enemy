@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
+    public Transform Opponent;
+
     void OnEnable()
     {
-        Card.OnCardSelected += Echo;
+        Card.OnCardSelected += Attack;
     }
 
     void OnDisable()
     {
-        Card.OnCardSelected += Echo;
+        Card.OnCardSelected += Attack;
     }
 
-    void Echo(Card card)
+    void Attack(Card card)
     {
-        Debug.Log(card.Name);
+        Instantiate(card.Effect, Opponent.position, Quaternion.identity);
     }
 }
