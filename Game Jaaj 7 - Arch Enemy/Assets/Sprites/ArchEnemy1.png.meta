@@ -1,0 +1,852 @@
+fileFormatVersion: 2
+guid: 8cdceb937adeebe4a90036d2c1db2d91
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8952988999121247963
+    second: monster-lvl1_0
+  - first:
+      213: -2253222586293618573
+    second: monster-lvl1_1
+  - first:
+      213: 4521916167368001347
+    second: monster-lvl1_2
+  - first:
+      213: 7587580795581981034
+    second: monster-lvl1_3
+  - first:
+      213: 8592884896571238553
+    second: monster-lvl1_4
+  - first:
+      213: 3241390651427913955
+    second: monster-lvl1_5
+  - first:
+      213: -8582536480636659444
+    second: monster-lvl1_6
+  - first:
+      213: 7250356532070692294
+    second: monster-lvl1_7
+  - first:
+      213: 3038084524080232429
+    second: monster-lvl1_8
+  - first:
+      213: 4640480673746240748
+    second: monster-lvl1_9
+  - first:
+      213: 3677292537085395834
+    second: monster-lvl1_10
+  - first:
+      213: 5005387099126765667
+    second: monster-lvl1_11
+  - first:
+      213: -5514396638080716432
+    second: monster-lvl1_12
+  - first:
+      213: 7417952460342729880
+    second: monster-lvl1_13
+  - first:
+      213: -2993042501132263524
+    second: monster-lvl1_14
+  - first:
+      213: -8337911859405607639
+    second: monster-lvl1_15
+  - first:
+      213: -822761947712345259
+    second: monster-lvl1_16
+  - first:
+      213: 4900407452983368965
+    second: monster-lvl1_17
+  - first:
+      213: -6196620276071359291
+    second: monster-lvl1_18
+  - first:
+      213: -3578074184140583728
+    second: monster-lvl1_19
+  - first:
+      213: 1084057531019292862
+    second: monster-lvl1_20
+  - first:
+      213: -2528758315990178506
+    second: monster-lvl1_21
+  - first:
+      213: -4059155882778412974
+    second: monster-lvl1_22
+  - first:
+      213: -7932156042418114850
+    second: monster-lvl1_23
+  - first:
+      213: 3364903467569667769
+    second: monster-lvl1_24
+  - first:
+      213: 8664377188938998960
+    second: monster-lvl1_25
+  - first:
+      213: -2432011568521153936
+    second: monster-lvl1_26
+  - first:
+      213: -272131107160292501
+    second: monster-lvl1_27
+  - first:
+      213: 6169157312805946069
+    second: monster-lvl1_28
+  - first:
+      213: -3650652258321951341
+    second: monster-lvl1_29
+  - first:
+      213: -6998716718604566030
+    second: monster-lvl1_30
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: monster-lvl1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 521e565b0f790c380800000000000000
+      internalID: -8952988999121247963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_1
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378f410fef1fab0e0800000000000000
+      internalID: -2253222586293618573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 347c01ccbc211ce30800000000000000
+      internalID: 4521916167368001347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_3
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a616d3968808c4960800000000000000
+      internalID: 7587580795581981034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 998a2ff494f004770800000000000000
+      internalID: 8592884896571238553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_5
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 125
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e002a4bf9bbbfc20800000000000000
+      internalID: 3241390651427913955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0912d70b84b4e880800000000000000
+      internalID: -8582536480636659444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 100
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c5b1051ad07e9460800000000000000
+      internalID: 7250356532070692294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_8
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 100
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de7f96737c1792a20800000000000000
+      internalID: 3038084524080232429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 100
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce4c5b1269c466040800000000000000
+      internalID: 4640480673746240748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_10
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 100
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a738b20541e580330800000000000000
+      internalID: 3677292537085395834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 100
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36816c60c05b67540800000000000000
+      internalID: 5005387099126765667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 75
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0713794697de873b0800000000000000
+      internalID: -5514396638080716432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_13
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 75
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c967fe57cd1f660800000000000000
+      internalID: 7417952460342729880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_14
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 75
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f5d5af3b39676d0800000000000000
+      internalID: -2993042501132263524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 75
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dac9b0759c94c80800000000000000
+      internalID: -8337911859405607639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_16
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 75
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ba5e32e56f494f0800000000000000
+      internalID: -822761947712345259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_17
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 75
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50d10c17d9eb10440800000000000000
+      internalID: 4900407452983368965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc98c4a0be210aa0800000000000000
+      internalID: -6196620276071359291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_19
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 50
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc0e4aac70285ec0800000000000000
+      internalID: -3578074184140583728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_20
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 50
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb0fd74b4985b0f00800000000000000
+      internalID: 1084057531019292862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_21
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 50
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6352794a5bb08ecd0800000000000000
+      internalID: -2528758315990178506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_22
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 50
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2583e0f1b3bfaa7c0800000000000000
+      internalID: -4059155882778412974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_23
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 50
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ede23b41b125be190800000000000000
+      internalID: -7932156042418114850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 25
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9be58ff20e982be20800000000000000
+      internalID: 3364903467569667769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_25
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 25
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4e4b2c52d0e3870800000000000000
+      internalID: 8664377188938998960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 25
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072f7a02d52cf3ed0800000000000000
+      internalID: -2432011568521153936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_27
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 25
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6380692332393cf0800000000000000
+      internalID: -272131107160292501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_28
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 25
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d24d41f3ef3d9550800000000000000
+      internalID: 6169157312805946069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_29
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 25
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3951e30fc17465dc0800000000000000
+      internalID: -3650652258321951341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: monster-lvl1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f1ccf7a9309fde90800000000000000
+      internalID: -6998716718604566030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
