@@ -5,20 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    [SerializeField]
+    private GameObject FadeOut;
     public void Play()
     {
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("Cutscene");
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void PlayFadeIn()
+    {
+        FadeOut.SetActive(true);
+        Invoke("Play", 3f);
+
     }
 }

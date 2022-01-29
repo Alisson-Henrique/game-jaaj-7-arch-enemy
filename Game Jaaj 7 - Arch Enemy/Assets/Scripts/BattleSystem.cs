@@ -7,6 +7,11 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
 public class BattleSystem : MonoBehaviour
 {
+	public GameObject panelHUD;
+
+
+	private GamePlayController gamePlayController;
+	 
 	public GameObject playerPrefab;
 	public GameObject enemyPrefab;
 
@@ -26,6 +31,11 @@ public class BattleSystem : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
+		gamePlayController = FindObjectOfType(typeof(GamePlayController)) as GamePlayController;
+	}
+
+	public void StartBattle()
+    {
 		state = BattleState.START;
 		StartCoroutine(SetupBattle());
 	}
@@ -49,14 +59,14 @@ public class BattleSystem : MonoBehaviour
 		PlayerTurn();
 	}
 
-	IEnumerator PlayerAttack()
+	IEnumerator PlayerAttack(Card card)
 	{
-		bool isDead = enemyUnit.TakeDamage(playerUnit.damage);
-
+		panelHUD.SetActive(false);
+		bool isDead = enemyUnit.TakeDamage(card.damage);
+		dialogueText.text = card.cardName + " !!!";
 		enemyHUD.SetHP(enemyUnit.currentHP);
-		dialogueText.text = "The attack is successful!";
 
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(4f);
 
 		if (isDead)
 		{
@@ -66,21 +76,21 @@ public class BattleSystem : MonoBehaviour
 		else
 		{
 			state = BattleState.ENEMYTURN;
-			StartCoroutine(EnemyTurn());
+			OnEnemyMoviment();
 		}
 	}
 
-	IEnumerator EnemyTurn()
+	IEnumerator EnemyTurn(Card card)
 	{
-		dialogueText.text = enemyUnit.unitName + " attacks!";
+		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(3f);
 
-		bool isDead = playerUnit.TakeDamage(enemyUnit.damage);
+		bool isDead = playerUnit.TakeDamage(card.damage);
 
 		playerHUD.SetHP(playerUnit.currentHP);
 
-		yield return new WaitForSeconds(1f);
+		yield return new WaitForSeconds(2f);
 
 		if (isDead)
 		{
@@ -90,6 +100,7 @@ public class BattleSystem : MonoBehaviour
 		else
 		{
 			state = BattleState.PLAYERTURN;
+			panelHUD.SetActive(true);
 			PlayerTurn();
 		}
 
@@ -122,18 +133,18 @@ public class BattleSystem : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.ENEMYTURN;
-		StartCoroutine(EnemyTurn());
+		OnEnemyMoviment();
 	}
 
-	public void OnAttackButton()
+	public void OnAttack(Card card)
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
 
-		StartCoroutine(PlayerAttack());
+		StartCoroutine(PlayerAttack(card));
 	}
 
-	public void OnHealButton()
+	public void OnHeal()
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
@@ -141,4 +152,60 @@ public class BattleSystem : MonoBehaviour
 		StartCoroutine(PlayerHeal());
 	}
 
+	public void OnMoviment(int id)
+    {
+		Card card = gamePlayController.playerCards[id];
+
+		if(id != 0)
+        {
+			card.currentCooldwon = card.cooldown;
+        }
+
+        switch (card.attckType)
+        {
+			case ATTACK_TYPE.Attack:
+				OnAttack(card);
+				break;
+			case ATTACK_TYPE.Defense:
+				break;
+			case ATTACK_TYPE.Heal:
+				OnHeal();
+				break;
+		}
+
+		gamePlayController.playerCards[id] = card;
+	}
+
+	public void OnEnemyMoviment()
+    {
+		Card[] cards = gamePlayController.enemyCards;
+		int index = 0;
+		Card choice = cards[0];
+
+		foreach(Card card in cards)
+        {
+			if(card.cooldown == 0)
+            {
+				if(card.damage > choice.damage)
+                {
+					choice = card;
+                }
+            }
+			index++;
+		}
+
+		if(cards[0].cardName != choice.cardName)
+        {
+			cards[index].currentCooldwon = cards[index].cooldown;
+		}
+
+		gamePlayController.enemyCards = cards;
+
+		StartCoroutine(EnemyTurn(choice));
+	}
+
+	public void checkCooldown()
+    {
+
+    }
 }

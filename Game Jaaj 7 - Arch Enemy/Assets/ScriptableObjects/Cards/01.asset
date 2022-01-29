@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab38ba2af0d4e14d9499eefed2a798e, type: 3}
   m_Name: 01
   m_EditorClassIdentifier: 
-  cardName: Descarga
-  image: {fileID: 21300000, guid: 84a4c17e121eba448a2f47efe0288a53, type: 3}
-  damage: 30
-  CriticalChance: 0.5
-  border: {fileID: 21300000, guid: 6759156242c996e408f9167c9fb5105b, type: 3}
+  cardName: "Ataque B\xE1sico"
+  image: {fileID: 21300000, guid: 50435b7b61848d34e85b6066398dae53, type: 3}
+  damage: 10
+  CriticalChance: 0
+  border: {fileID: 21300000, guid: 24a14952b3c85df4ab00abbb7b88de15, type: 3}
+  description: Socao
+  attckType: 0
+  cooldown: 0
