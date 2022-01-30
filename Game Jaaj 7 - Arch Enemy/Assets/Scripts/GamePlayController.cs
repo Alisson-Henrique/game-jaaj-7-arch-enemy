@@ -13,8 +13,8 @@ public class GamePlayController : MonoBehaviour
     private Card[] options;
 
     //HUD
-    [SerializeField]
-    private Text descriptionText;
+    [SerializeField] private Text cardNameText;
+    [SerializeField] private Text descriptionText;
     private Animator hidenDown;
     private Animator hidenUp;
 
@@ -32,8 +32,6 @@ public class GamePlayController : MonoBehaviour
 
     public Text titleChoice01;
     public Text titleChoice02;
-
-    public Text cardText;
 
     //Player
     public Card[] playerCards;
@@ -90,7 +88,7 @@ public class GamePlayController : MonoBehaviour
 
     public void ShowInfoCard(int id)
     {
-        cardText.text = playerCards[id].cardName;
+        cardNameText.text = playerCards[id].cardName;
         descriptionText.text = playerCards[id].description;
     } 
 
