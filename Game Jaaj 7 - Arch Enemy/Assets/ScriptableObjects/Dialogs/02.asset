@@ -14,28 +14,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   illustration: {fileID: 21300000, guid: 312c155beb2983c4eb01677f247e6ab3, type: 3}
   sentences:
-  - "[NOME_2] fugiu, destruindo parte do nosso pequeno laborat\xF3rio."
-  - Durante algumas semanas procurei desesperadamente por meu amigo, sem sucesso
-  - "[NOME_2] desaparecer\xE1..."
-  - "Aos poucos me acostumei com a aus\xEAncia de [NOME_2]"
+  - "Fortunato fugiu destruindo parte do nosso pequeno laborat\xF3rio."
+  - Durante algumas semanas procurei desesperadamente por meu amigo, todavia sem
+    sucesso.
+  - Fortunato desapareceu...
+  - "Aos poucos me acostumei com a aus\xEAncia de Fortunato"
   - "No entanto, o entusiasmo que alimentava meus experimentos foi substitu\xEDdo
     por uma estranha sensa\xE7\xE3o de sobriedade vazia e medo."
   - Nos anos que se seguiram tive a oportunidade de estudar em Paris, e conhecer
     as luzes mais brilhantes dos nossos tempos.
-  - "Al\xE9m dos estudos, as festas tamb\xE9m faziam parte do meu dia-a-dia."
+  - "Al\xE9m dos estudos, as festas tamb\xE9m faziam parte do meu dia a dia."
   - "Eu cheguei l\xE1; era um iluminado. Mas a fria escurid\xE3o n\xE3o tardaria
     de voltar..."
-  - "Uma carta de minha terra natal, de meus pais, contava sobre a morte violenta
+  - "Uma carta de minha terra natal, dos meus pais, contava sobre a morte violenta
     de um parente pr\xF3ximo."
-  - "Uma morte, ali\xE1s muito semelhante a algumas outras que haviam come\xE7ado
-    a ocorrer pouco antes."
-  - Era um convite para o funeral...
+  - "Uma morte muito semelhante a algumas outras que haviam come\xE7ado a ocorrer
+    pouco antes."
+  - 'Era um convite para o funeral... '
   - "Malditas sombras... sempre agarradas aos nossos p\xE9s, nos perseguindo..."
-  - Malditas sombras!
-  - "Estar em G\xE9vaudan \xE9 sempre afogar o cora\xE7\xE3o num mar cinzento de
-    luto."
-  - "Acreditava que as muitas milhas que separam Paris deste lugar me protegeriam
-    deve vento miasm\xE1tico"
-  - "Minhas reflex\xF5es l\xFAgubres foram interrompidas por uma imagem perturbadora"
-  - "Olhos verdes cintilavam na escurid\xE3o da floresta que se avizinhava"
-  - "O passado me espreitava... e eu teria de enfrent\xE1-lo."
+  - 'Malditas sombras! '
+  - "Estar em G\xE9vaudan sempre \xE9 como afogar o cora\xE7\xE3o num mar cinzento
+    de luto."
+  - Eu acreditava que as muitas milhas que separam Paris deste lugar sombrio me protegeriam
+    dos meus antigos erros.
+  - "Minhas reflex\xF5es l\xFAgubres foram interrompidas por uma imagem perturbadora."
+  - "Olhos verdes cintilavam na escurid\xE3o da floresta que se avizinhava. "
+  - "O passado me espreitava\u2026 e eu teria de enfrent\xE1-lo."

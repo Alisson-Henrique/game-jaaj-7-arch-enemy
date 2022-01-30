@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   illustration: {fileID: 21300000, guid: 312c155beb2983c4eb01677f247e6ab3, type: 3}
   sentences:
-  - "Eu adoraria dizer que a forma hedionda de [NOME_2] me entristecia. Mas infelizmente
-    n\xE3o acho que seria honesto de minha parte."
+  - Eu adoraria dizer que a forma hedionda de Fortunato me entristecia. Entretanto
+    seria desonesto de minha parte.
   - "Talvez houvesse tristeza na avalanche de sentimentos que me soterrava, mas por
-    algum motivo o \xF3dio era o que mais ardia em mim. Imagino que em [NOME_2] tamb\xE9m."
+    algum motivo o \xF3dio era o que mais ardia em mim. Imagino que em Fortunato
+    tamb\xE9m."
   - "Sua exist\xEAncia \xE9 uma recorda\xE7\xE3o do maior fracasso de minha vida. "
   - "Esse fracasso estava agora amea\xE7ando a vida dos habitantes de G\xE9vaudan
     e eu teria parte da culpa."
-  - "...um uivo irrompe dentre as \xE1rvores; a aniquila\xE7\xE3o declara seu dia."
+  - "Agora, esse fracasso est\xE1 amea\xE7ando a vida dos habitantes de G\xE9vaudan
+    e eu tenho parte desta culpa."
