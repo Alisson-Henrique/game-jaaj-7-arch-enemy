@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4f26b65fee3c842b532d24bcde3a0b, type: 3}
   m_Name: 01
   m_EditorClassIdentifier: 
-  illustration: {fileID: 0}
+  illustration: {fileID: 21300000, guid: 1010124ed86f7d74e9c3839da311a9be, type: 3}
   sentences:
   - "G\xE9vaudan um canto esquecido em um mundo imerso em sombras. No entanto, luzes
     avan\xE7avam sobre o mundo."

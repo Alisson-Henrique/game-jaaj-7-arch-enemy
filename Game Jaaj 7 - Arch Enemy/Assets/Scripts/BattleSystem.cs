@@ -80,6 +80,7 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator PlayerAttack(Card card)
 	{
 		panelHUD.SetActive(false);
+		playerHUD.SetCardSelected(card);
 
 		int damage = card.damage;
 
@@ -93,7 +94,7 @@ public class BattleSystem : MonoBehaviour
 		dialogueText.text = card.cardName + " !!!";
 		enemyHUD.SetHP(enemyUnit.currentHP);
 
-		yield return new WaitForSeconds(4f);
+		yield return new WaitForSeconds(5f);
 
 		if (isDead)
 		{
@@ -132,6 +133,7 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator PlayerHeal(Card card)
 	{
+		playerHUD.SetCardSelected(card);
 		panelHUD.SetActive(false);
 		playerUnit.Heal(Mathf.RoundToInt(playerUnit.maxHP - (playerUnit.maxHP * 0.5f)));
 
@@ -146,6 +148,7 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator PlayerDefense(Card card)
 	{
+		playerHUD.SetCardSelected(card);
 		panelHUD.SetActive(false);
 		isDefense = true;
 		dialogueText.text = "Você Prepara Defesa!";
@@ -215,21 +218,18 @@ public class BattleSystem : MonoBehaviour
 		Card[] cards = gamePlayController.enemyCards;
 		Card choice = cards[Random.Range(0, cards.Length)];
 
-		StartCoroutine(EnemyTurn(choice));
+		EnemyTurn(choice);
 	}
-	IEnumerator EnemyTurn(Card card)
+
+	public void EnemyTurn(Card card)
 	{
-		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
-
-		yield return new WaitForSeconds(3f);
-
 		switch (card.attckType)
 		{
 			case ATTACK_TYPE.Attack:
 				StartCoroutine(AttackEnemy(card));
 				break;
 			case ATTACK_TYPE.Defense:
-				StartCoroutine(DefenseEnemy());
+				StartCoroutine(DefenseEnemy(card));
 				break;
 			case ATTACK_TYPE.Heal:
 				StartCoroutine(HealEnemy(card));
@@ -240,6 +240,9 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator AttackEnemy(Card card)
     {
+		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
+		enemyHUD.SetCardSelected(card);
+
 		int damage = card.damage;
 
 		if (isDefense)
@@ -270,12 +273,14 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator HealEnemy(Card card)
     {
+		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
+		enemyHUD.SetCardSelected(card);
 		enemyUnit.Heal(Mathf.RoundToInt(enemyUnit.maxHP - (enemyUnit.maxHP * 0.25f)));
 
 		enemyHUD.SetHP(enemyUnit.currentHP);
 		dialogueText.text = enemyUnit.unitName + " recuperou a vida!";
 
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3f);
 
 		state = BattleState.PLAYERTURN;
 		panelHUD.SetActive(true);
@@ -283,10 +288,12 @@ public class BattleSystem : MonoBehaviour
 		PlayerTurn();
 	}
 
-	IEnumerator DefenseEnemy()
+	IEnumerator DefenseEnemy(Card card)
     {
+		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
+		enemyHUD.SetCardSelected(card);
 		isEnemyDefense = true;
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(3f);
 
 		state = BattleState.PLAYERTURN;
 		panelHUD.SetActive(true);

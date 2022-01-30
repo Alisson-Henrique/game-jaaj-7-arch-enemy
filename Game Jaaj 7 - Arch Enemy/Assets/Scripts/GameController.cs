@@ -80,4 +80,14 @@ public class GameController : MonoBehaviour
     {
         return ilustrationSprites[curretLevel];
     }
+
+    public void skipCutscene()
+    {
+        SceneManager.LoadScene("Gameplay");
+    }
+
+    public AudioClip GetBattleAudioClip()
+    {
+        return BattleAudioClips[curretLevel];
+    }
 }

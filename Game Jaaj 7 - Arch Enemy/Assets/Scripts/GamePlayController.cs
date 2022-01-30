@@ -33,6 +33,8 @@ public class GamePlayController : MonoBehaviour
     public Text titleChoice01;
     public Text titleChoice02;
 
+    public Text cardText;
+
     //Player
     public Card[] playerCards;
 
@@ -47,10 +49,16 @@ public class GamePlayController : MonoBehaviour
     public Transform sceneryPosition;
     public Camera cameraScenery;
 
+    //Audio
+    private AudioSource audioSource;
+ 
     private void Start()
     {
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         battleSystem = FindObjectOfType(typeof(BattleSystem)) as BattleSystem;
+
+        StartAudio();
+
         for (int i = 0; i < 2; i++)
         {
             int t = Random.Range(0, cards.Length);
@@ -73,8 +81,16 @@ public class GamePlayController : MonoBehaviour
         cameraScenery.backgroundColor = gameController.GetColorScenery();
     }
 
+    public void StartAudio()
+    {
+        audioSource = GetComponent<AudioSource>();
+        audioSource.clip = gameController.GetBattleAudioClip();
+        audioSource.Play();
+    }
+
     public void ShowInfoCard(int id)
     {
+        cardText.text = playerCards[id].cardName;
         descriptionText.text = playerCards[id].description;
     } 
 
