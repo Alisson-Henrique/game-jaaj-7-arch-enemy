@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab38ba2af0d4e14d9499eefed2a798e, type: 3}
   m_Name: MicroorganicCorruption
   m_EditorClassIdentifier: 
-  cardName: "Corrup\xE7\xE3o Microorg\xE2nica"
+  cardName: "Corrup\xE7\xE3o Micro-org\xE2nica"
   image: {fileID: 21300000, guid: a627f98a0c7b3c94f8a38d66b4dbaded, type: 3}
   damage: 10
   CriticalChance: 0
   border: {fileID: 21300000, guid: d5841812ff05b2049b3303a7694a0ecf, type: 3}
-  description: "Uma carga abudante de micr\xF3bios \xE9 injetada no advers\xE1rio,
-    aprodecendo-o aos poucos. Pode durar diversos turnos."
+  description: "Uma carga abundante de micr\xF3bios \xE9 injetada no advers\xE1rio,
+    apodrecendo-o aos poucos. Pode durar diversos turnos."
   attckType: 0
   cooldown: 2
   currentCooldwon: 0

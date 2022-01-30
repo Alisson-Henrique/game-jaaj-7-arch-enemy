@@ -17,8 +17,8 @@ MonoBehaviour:
   damage: 50
   CriticalChance: 0
   border: {fileID: 21300000, guid: 3e26fc4997d402f41bf70221732fae8a, type: 3}
-  description: "Uma for\xE7a esmagadora \xE9 lan\xE7ada contra o advers\xE1rio, causando
-    grande dano. No entanto, em decorr\xEAncia do enorme peso, o usu\xE1rio da carta
+  description: "Uma for\xE7a esmagadora \xE9 lan\xE7ada contra o advers\xE1rio causando
+    grande dano. No entanto, em decorr\xEAncia do enorme peso o usu\xE1rio da carta
     perde agilidade."
   attckType: 0
   cooldown: 3
