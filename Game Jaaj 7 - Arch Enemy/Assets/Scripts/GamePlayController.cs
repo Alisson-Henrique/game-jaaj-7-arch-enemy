@@ -75,7 +75,7 @@ public class GamePlayController : MonoBehaviour
         titleChoice01.text = options[0].cardName;
         titleChoice02.text = options[1].cardName;
         sceneryObeject = gameController.GetScenery();
-        GameObject temp = Instantiate(sceneryObeject, sceneryPosition.position, sceneryPosition.localRotation);
+        GameObject temp = Instantiate(sceneryObeject, sceneryPosition.position + sceneryObeject.transform.position, sceneryPosition.localRotation);
         cameraScenery.backgroundColor = gameController.GetColorScenery();
     }
 
