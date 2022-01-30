@@ -46,7 +46,7 @@ public class GameController : MonoBehaviour
     public void LevelUp()
     {
         curretLevel++;
-        if(curretLevel == 3)
+        if(curretLevel == 4)
         {
             SceneManager.LoadScene("Credits");
         }

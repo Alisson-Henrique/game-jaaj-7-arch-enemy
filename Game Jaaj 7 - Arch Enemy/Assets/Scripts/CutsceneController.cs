@@ -19,12 +19,9 @@ public class CutsceneController : MonoBehaviour
         FadeOut.SetActive(true);
     }
 
-    void Update()
+    public void SkipCutscene()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            gameController.skipCutscene();
-        }
+        gameController.skipCutscene();
     }
 
     void Start()
