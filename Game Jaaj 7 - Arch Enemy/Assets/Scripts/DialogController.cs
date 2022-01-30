@@ -38,12 +38,17 @@ public class DialogController : MonoBehaviour
     {
         illustration = dialog.illustration;
 
+        if (Input.anyKey)
+        {
+            Debug.Log("A key or mouse click has been detected");
+        }
+
         foreach (char c in sentences[index].ToCharArray()){
             DialogTxt.text += c;
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.075f);
         }
         
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2f);
 
         nextDialog();
     }
