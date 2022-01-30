@@ -20,5 +20,5 @@ MonoBehaviour:
   description: "A luz da lua inunda o ambiente causando dano e possivelmente desorientando
     o advers\xE1rio durante alguns turnos."
   attckType: 0
-  cooldown: 0
-  currentCooldwon: 2
+  cooldown: 2
+  currentCooldwon: 0

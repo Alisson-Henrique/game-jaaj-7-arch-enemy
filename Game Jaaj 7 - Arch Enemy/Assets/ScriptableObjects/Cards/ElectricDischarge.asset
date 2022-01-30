@@ -20,5 +20,5 @@ MonoBehaviour:
   description: "Eletricidade dos c\xE9us energiza o portador da carta, permitindo
     que descargas poderosas possam ser disparadas contra o advers\xE1rio."
   attckType: 0
-  cooldown: 0
-  currentCooldwon: 2
+  cooldown: 2
+  currentCooldwon: 0
