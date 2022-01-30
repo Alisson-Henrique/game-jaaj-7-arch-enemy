@@ -9,7 +9,7 @@ public class MainMenuController : MonoBehaviour
     private GameObject FadeOut;
     public void Play()
     {
-        SceneManager.LoadScene("Gameplay");
+        SceneManager.LoadScene("Cutscene");
     }
 
     public void Quit()
