@@ -8,7 +8,6 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 	public GameObject panelHUD;
-	public GameObject fadeHUD;
 
 	private GamePlayController gamePlayController;
 	private ButtonAttackBehaviour attackBehaviour;
@@ -55,7 +54,7 @@ public class BattleSystem : MonoBehaviour
 		enemyUnit = enemyGO.GetComponent<Unit>();
 
 
-		dialogueText.text = "Voc� enfrentara " + enemyUnit.unitName + "...";
+		dialogueText.text = "Você enfrentara " + enemyUnit.unitName + "...";
 		attackBehaviour = FindObjectOfType(typeof(ButtonAttackBehaviour)) as ButtonAttackBehaviour;
 
 		attackBehaviour.setup();
@@ -64,7 +63,6 @@ public class BattleSystem : MonoBehaviour
 		enemyHUD.SetHUD(enemyUnit);
 
 		yield return new WaitForSeconds(2f);
-		fadeHUD.SetActive(false);
 		state = BattleState.PLAYERTURN;
 		PlayerTurn();
 	}
