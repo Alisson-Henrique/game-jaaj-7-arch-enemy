@@ -441,8 +441,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cutcenesDialogs:
   - {fileID: 11400000, guid: b44f0bbe7190d4344a2d0a61a46764e9, type: 2}
+  - {fileID: 11400000, guid: d11541b24e91545429ca65d7ce67f219, type: 2}
+  - {fileID: 11400000, guid: 5f2716a01e5cb94478eadc433b73c7fe, type: 2}
   EnemyPrefabs:
-  - {fileID: 9144044523059303901, guid: fa266a19098ec2b4186f2b6670ace504, type: 3}
+  - {fileID: 3323620490232226748, guid: d1f52ffca0324a949a280d0c95dc33fa, type: 3}
+  - {fileID: 4459375678738659946, guid: f722d43cff768a947ba5dbb89d9603f5, type: 3}
+  - {fileID: 5186635728260895890, guid: 003281ffa5eada749889765273567246, type: 3}
+  sceneryObejects:
+  - {fileID: 0}
+  colorScenerys: []
   curretLevel: 0
 --- !u!4 &1766540587
 Transform:

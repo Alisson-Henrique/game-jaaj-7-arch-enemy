@@ -14,19 +14,24 @@ public class GamePlayController : MonoBehaviour
 
     //HUD
     [SerializeField]
-    private Text descriptionText; 
+    private Text descriptionText;
+    private Animator hidenDown;
+    private Animator hidenUp;
 
     //Panel Choice
     public GameObject choicePanel;
 
     public Image choiceContent01;
     public Image choiceContent02;
-    public Image choiceBorder01;
 
+    public Image choiceBorder01;
     public Image choiceBorder02;
 
     public Text choiceDescription01;
     public Text choiceDescription02;
+
+    public Text titleChoice01;
+    public Text titleChoice02;
 
     //Player
     public Card[] playerCards;
@@ -37,8 +42,10 @@ public class GamePlayController : MonoBehaviour
     //Enemy
     public Card[] enemyCards;
 
-    [SerializeField]
-    private BattleHUD enemyHUD;
+    //Scenery
+    private GameObject sceneryObeject;
+    public Transform sceneryPosition;
+    public Camera cameraScenery;
 
     private void Start()
     {
@@ -58,6 +65,12 @@ public class GamePlayController : MonoBehaviour
 
         choiceDescription01.text = options[0].description;
         choiceDescription02.text = options[1].description;
+
+        titleChoice01.text = options[0].cardName;
+        titleChoice02.text = options[1].cardName;
+        sceneryObeject = gameController.GetScenery();
+        GameObject temp = Instantiate(sceneryObeject, sceneryPosition.position, sceneryPosition.localRotation);
+        cameraScenery.backgroundColor = gameController.GetColorScenery();
     }
 
     public void ShowInfoCard(int id)

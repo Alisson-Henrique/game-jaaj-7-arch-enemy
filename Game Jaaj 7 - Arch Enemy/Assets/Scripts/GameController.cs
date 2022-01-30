@@ -9,6 +9,10 @@ public class GameController : MonoBehaviour
 
     public GameObject[] EnemyPrefabs;
 
+    public GameObject[] sceneryObejects;
+
+    public Color[] colorScenerys;
+
     public int curretLevel;
 
     private int nextScene;
@@ -50,5 +54,15 @@ public class GameController : MonoBehaviour
     public void Lost()
     {
         SceneManager.LoadScene("Gameplay");
+    }
+
+    public GameObject GetScenery()
+    {
+        return sceneryObejects[curretLevel];
+    }
+
+    public Color GetColorScenery()
+    {
+        return colorScenerys[curretLevel];
     }
 }

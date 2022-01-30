@@ -21,4 +21,4 @@ MonoBehaviour:
     aprodecendo-o aos poucos. Pode durar diversos turnos."
   attckType: 0
   cooldown: 0
-  currentCooldwon: 0
+  currentCooldwon: 2

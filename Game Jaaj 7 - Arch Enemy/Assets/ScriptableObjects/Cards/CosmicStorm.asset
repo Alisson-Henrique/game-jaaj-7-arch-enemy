@@ -21,4 +21,4 @@ MonoBehaviour:
     advers\xE1rio, no entanto afetam a vitalidade do usu\xE1rio da carta."
   attckType: 0
   cooldown: 0
-  currentCooldwon: 0
+  currentCooldwon: 2
