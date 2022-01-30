@@ -437,7 +437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 1010124ed86f7d74e9c3839da311a9be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -658,7 +658,7 @@ MonoBehaviour:
   - "G\xE9vaudan \xE9 um canto esquecido do mundo, imerso nas sombras."
   - "Eu, Torgate, e meu amigo Jo\xE3o, mais do que qualquer pessoa naquela fim de
     mundo, esper\xE1vamos ansiosamente pelo fim da escurid\xE3o."
-  Dialog: {fileID: 11400000, guid: b44f0bbe7190d4344a2d0a61a46764e9, type: 2}
+  dialog: {fileID: 0}
   nextScene: GamePlay
 --- !u!4 &1431910505
 Transform:
