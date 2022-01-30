@@ -1328,9 +1328,9 @@
     "m_Guid": {
         "m_GuidSerialized": "536d8935-9e40-4633-b225-76368b9189c5"
     },
-    "m_Name": "DissolveAmount",
+    "m_Name": "Amount",
     "m_DefaultReferenceName": "Vector1_8a7621c9d53d4dd9b6903701b65f950f",
-    "m_OverrideReferenceName": "_DissolveAmount",
+    "m_OverrideReferenceName": "_Amount",
     "m_GeneratePropertyBlock": true,
     "m_Precision": 0,
     "overrideHLSLDeclaration": false,
