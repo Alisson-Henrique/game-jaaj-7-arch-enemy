@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab38ba2af0d4e14d9499eefed2a798e, type: 3}
+  m_Name: CosmicStorm
+  m_EditorClassIdentifier: 
+  cardName: "Tempestade C\xF3smica"
+  image: {fileID: 21300000, guid: 92608efde9faf0745ab55030378fe0d2, type: 3}
+  damage: 70
+  CriticalChance: 0
+  border: {fileID: 21300000, guid: 103307dedb634e147ad00dcc04a4ab57, type: 3}
+  description: "Ventos solares e explos\xF5es c\xF3smicas causam grandes danos no
+    advers\xE1rio, no entanto afetam a vitalidade do usu\xE1rio da carta."
+  attckType: 0
+  cooldown: 0
+  currentCooldwon: 0

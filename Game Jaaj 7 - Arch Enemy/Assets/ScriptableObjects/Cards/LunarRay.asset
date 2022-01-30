@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bab38ba2af0d4e14d9499eefed2a798e, type: 3}
+  m_Name: LunarRay
+  m_EditorClassIdentifier: 
+  cardName: Raio Lunar
+  image: {fileID: 21300000, guid: 2b34c6e02a3fbbc46b1327383a8bef15, type: 3}
+  damage: 30
+  CriticalChance: 0
+  border: {fileID: 21300000, guid: 103307dedb634e147ad00dcc04a4ab57, type: 3}
+  description: "A luz da lua inunda o ambiente causando dano e possivelmente desorientando
+    o advers\xE1rio durante alguns turnos."
+  attckType: 0
+  cooldown: 0
+  currentCooldwon: 0
