@@ -167,5 +167,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitName: Monster Lv 1
-  maxHP: 100
-  currentHP: 100
+  maxHP: 125
+  currentHP: 125
