@@ -13,9 +13,12 @@ public class DialogController : MonoBehaviour
 
     [SerializeField]
     private string[] sentences;
+
     [SerializeField]
     private Dialog dialog;
 
+    [SerializeField]
+    private Sprite illustration;
     private int index;
 
     public string nextScene;
@@ -33,11 +36,13 @@ public class DialogController : MonoBehaviour
 
     IEnumerator ShowDialog()
     {
+        illustration = dialog.illustration;
+
         foreach (char c in sentences[index].ToCharArray()){
             DialogTxt.text += c;
             yield return new WaitForSeconds(0.05f);
         }
-
+        
         yield return new WaitForSeconds(1f);
 
         nextDialog();

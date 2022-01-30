@@ -30,6 +30,7 @@ public class BattleSystem : MonoBehaviour
 
 	public BattleState state;
 
+	public bool isDefense;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -41,7 +42,7 @@ public class BattleSystem : MonoBehaviour
 	public void StartBattle()
     {
 		state = BattleState.START;
-		playerPrefab = gameController.EnemyPrefabs[gameController.curretLevel];
+		enemyPrefab = gameController.EnemyPrefabs[gameController.curretLevel];
 		StartCoroutine(SetupBattle());
 	}
 
@@ -80,7 +81,7 @@ public class BattleSystem : MonoBehaviour
 		if (isDead)
 		{
 			state = BattleState.WON;
-			EndBattle();
+			StartCoroutine(EndBattle());
 		}
 		else
 		{
@@ -91,12 +92,21 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator EnemyTurn(Card card)
 	{
+		bool con = true;
 		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
 
 		yield return new WaitForSeconds(3f);
 
-		bool isDead = playerUnit.TakeDamage(card.damage);
+		int damage = card.damage;
 
+		if (isDefense)
+        {
+			isDefense = false;
+			damage = Mathf.RoundToInt(damage - (damage * 0.5f));
+		}
+
+		bool isDead = playerUnit.TakeDamage(damage);
+		isDefense = false;
 		playerHUD.SetHP(playerUnit.currentHP);
 
 		yield return new WaitForSeconds(2f);
@@ -113,7 +123,7 @@ public class BattleSystem : MonoBehaviour
 			attackBehaviour.Load();
 			PlayerTurn();
 		}
-
+		
 	}
 
 	IEnumerator EndBattle()
@@ -121,15 +131,17 @@ public class BattleSystem : MonoBehaviour
 		if (state == BattleState.WON)
 		{
 			dialogueText.text = "Você venceu!";
+			yield return new WaitForSeconds(2f);
 			gameController.LevelUp();
 		}
 		else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "Você perdeu...";
+			yield return new WaitForSeconds(2f);
 			gameController.Lost();
 		}
 
-		yield return new WaitForSeconds(3f);
+		yield return new WaitForSeconds(1f);
 	}
 
 	void PlayerTurn()
@@ -137,13 +149,25 @@ public class BattleSystem : MonoBehaviour
 		dialogueText.text = "Escolha um ataque";
 	}
 
-	IEnumerator PlayerHeal()
+	IEnumerator PlayerHeal(Card card)
 	{
-		playerUnit.Heal(5);
+		panelHUD.SetActive(false);
+		playerUnit.Heal(card.damage);
 
 		playerHUD.SetHP(playerUnit.currentHP);
 		dialogueText.text = "Você recuperou sua vida!";
 
+		yield return new WaitForSeconds(2f);
+
+		state = BattleState.ENEMYTURN;
+		OnEnemyMoviment();
+	}
+
+	IEnumerator PlayerDefense(Card card)
+	{
+		panelHUD.SetActive(false);
+		isDefense = true;
+		dialogueText.text = "Você Prepara Defesa!";
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.ENEMYTURN;
@@ -158,13 +182,21 @@ public class BattleSystem : MonoBehaviour
 		StartCoroutine(PlayerAttack(card));
 	}
 
-	public void OnHeal()
+	public void OnHeal(Card card)
 	{
 		if (state != BattleState.PLAYERTURN)
 			return;
 
-		StartCoroutine(PlayerHeal());
+		StartCoroutine(PlayerHeal(card));
 	}
+
+	public void OnDefense(Card card)
+    {
+		if (state != BattleState.PLAYERTURN)
+			return;
+
+		StartCoroutine(PlayerDefense(card));
+    }
 
 	public void OnMoviment(int id)
     {
@@ -176,7 +208,7 @@ public class BattleSystem : MonoBehaviour
         }
         else
         {
-			if (id != 0)
+			if (id == 2)
 			{
 				attackBehaviour.cooldown();
 			}
@@ -188,9 +220,10 @@ public class BattleSystem : MonoBehaviour
 					OnAttack(card);
 					break;
 				case ATTACK_TYPE.Defense:
+					OnDefense(card);
 					break;
 				case ATTACK_TYPE.Heal:
-					OnHeal();
+					OnHeal(card);
 					break;
 			}
 		}

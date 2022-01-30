@@ -37,13 +37,18 @@ public class GameController : MonoBehaviour
     public void LevelUp()
     {
         curretLevel++;
-
-        SceneManager.LoadScene("Cutscene");
-
+        if(curretLevel == 3)
+        {
+            SceneManager.LoadScene("Credits");
+        }
+        else
+        {
+            SceneManager.LoadScene("Cutscene");
+        }
     }
 
     public void Lost()
     {
-
+        SceneManager.LoadScene("Gameplay");
     }
 }
