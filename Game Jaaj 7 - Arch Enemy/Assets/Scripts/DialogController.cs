@@ -14,7 +14,7 @@ public class DialogController : MonoBehaviour
     [SerializeField]
     private string[] sentences;
     [SerializeField]
-    private Dialog Dialog;
+    private Dialog dialog;
 
     private int index;
 
@@ -25,7 +25,8 @@ public class DialogController : MonoBehaviour
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         cutsceneController = FindObjectOfType(typeof(CutsceneController)) as CutsceneController;
         DialogTxt.text = "";
-        sentences = Dialog.sentences;
+        dialog = gameController.cutcenesDialogs[gameController.curretLevel];
+        sentences = dialog.sentences;
         index = 0;
         StartCoroutine("ShowDialog");
     }
@@ -65,6 +66,6 @@ public class DialogController : MonoBehaviour
 
     public void Finish()
     {
-        gameController.NextScene(nextScene);
+        gameController.NextScene("Gameplay");
     }
 }

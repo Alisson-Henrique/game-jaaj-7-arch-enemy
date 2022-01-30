@@ -20,3 +20,4 @@ MonoBehaviour:
   description: vai tafarel
   attckType: 2
   cooldown: 0
+  currentCooldwon: 125

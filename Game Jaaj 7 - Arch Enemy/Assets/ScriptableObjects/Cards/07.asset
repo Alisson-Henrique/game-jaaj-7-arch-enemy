@@ -19,4 +19,5 @@ MonoBehaviour:
   border: {fileID: 0}
   description: 
   attckType: 0
-  cooldown: 0
+  cooldown: 2
+  currentCooldwon: 2

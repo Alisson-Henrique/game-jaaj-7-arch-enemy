@@ -8,10 +8,12 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 	public GameObject panelHUD;
-
+	public GameObject fadeHUD;
 
 	private GamePlayController gamePlayController;
-	 
+	private ButtonAttackBehaviour attackBehaviour;
+	private GameController gameController;
+
 	public GameObject playerPrefab;
 	public GameObject enemyPrefab;
 
@@ -32,11 +34,14 @@ public class BattleSystem : MonoBehaviour
 	void Start()
 	{
 		gamePlayController = FindObjectOfType(typeof(GamePlayController)) as GamePlayController;
+		gameController = FindObjectOfType(typeof(GameController)) as GameController;
+		attackBehaviour = FindObjectOfType(typeof(ButtonAttackBehaviour)) as ButtonAttackBehaviour;
 	}
 
 	public void StartBattle()
     {
 		state = BattleState.START;
+		playerPrefab = gameController.EnemyPrefabs[gameController.curretLevel];
 		StartCoroutine(SetupBattle());
 	}
 
@@ -48,13 +53,17 @@ public class BattleSystem : MonoBehaviour
 		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation.position, enemyBattleStation.localRotation);
 		enemyUnit = enemyGO.GetComponent<Unit>();
 
+
 		dialogueText.text = "Você enfrentara " + enemyUnit.unitName + "...";
+		attackBehaviour = FindObjectOfType(typeof(ButtonAttackBehaviour)) as ButtonAttackBehaviour;
+
+		attackBehaviour.setup();
 
 		playerHUD.SetHUD(playerUnit);
 		enemyHUD.SetHUD(enemyUnit);
 
 		yield return new WaitForSeconds(2f);
-
+		fadeHUD.SetActive(false);
 		state = BattleState.PLAYERTURN;
 		PlayerTurn();
 	}
@@ -95,27 +104,32 @@ public class BattleSystem : MonoBehaviour
 		if (isDead)
 		{
 			state = BattleState.LOST;
-			EndBattle();
+			StartCoroutine(EndBattle());
 		}
 		else
 		{
 			state = BattleState.PLAYERTURN;
 			panelHUD.SetActive(true);
+			attackBehaviour.Load();
 			PlayerTurn();
 		}
 
 	}
 
-	void EndBattle()
+	IEnumerator EndBattle()
 	{
 		if (state == BattleState.WON)
 		{
 			dialogueText.text = "Você venceu!";
+			gameController.LevelUp();
 		}
 		else if (state == BattleState.LOST)
 		{
 			dialogueText.text = "Você perdeu...";
+			gameController.Lost();
 		}
+
+		yield return new WaitForSeconds(3f);
 	}
 
 	void PlayerTurn()
@@ -156,56 +170,37 @@ public class BattleSystem : MonoBehaviour
     {
 		Card card = gamePlayController.playerCards[id];
 
-		if(id != 0)
+		if (id == 2 && attackBehaviour.isCooldown())
         {
-			card.currentCooldwon = card.cooldown;
+			return;
         }
-
-        switch (card.attckType)
+        else
         {
-			case ATTACK_TYPE.Attack:
-				OnAttack(card);
-				break;
-			case ATTACK_TYPE.Defense:
-				break;
-			case ATTACK_TYPE.Heal:
-				OnHeal();
-				break;
-		}
+			if (id != 0)
+			{
+				attackBehaviour.cooldown();
+			}
 
-		gamePlayController.playerCards[id] = card;
+			attackBehaviour.isCooldown();
+			switch (card.attckType)
+			{
+				case ATTACK_TYPE.Attack:
+					OnAttack(card);
+					break;
+				case ATTACK_TYPE.Defense:
+					break;
+				case ATTACK_TYPE.Heal:
+					OnHeal();
+					break;
+			}
+		}
 	}
 
 	public void OnEnemyMoviment()
     {
 		Card[] cards = gamePlayController.enemyCards;
-		int index = 0;
-		Card choice = cards[0];
-
-		foreach(Card card in cards)
-        {
-			if(card.cooldown == 0)
-            {
-				if(card.damage > choice.damage)
-                {
-					choice = card;
-                }
-            }
-			index++;
-		}
-
-		if(cards[0].cardName != choice.cardName)
-        {
-			cards[index].currentCooldwon = cards[index].cooldown;
-		}
-
-		gamePlayController.enemyCards = cards;
+		Card choice = cards[Random.Range(0, cards.Length)];
 
 		StartCoroutine(EnemyTurn(choice));
 	}
-
-	public void checkCooldown()
-    {
-
-    }
 }

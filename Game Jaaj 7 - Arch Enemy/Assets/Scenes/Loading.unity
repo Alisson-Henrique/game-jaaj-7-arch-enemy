@@ -439,10 +439,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed6962a8213a7f0428fba05119487f8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hand:
-  - {fileID: 11400000, guid: fde93fbd1fcf75b4d888d3d38e839ecd, type: 2}
-  - {fileID: 11400000, guid: 29d2122c914309344b290d162dec12ac, type: 2}
-  - {fileID: 0}
+  cutcenesDialogs:
+  - {fileID: 11400000, guid: b44f0bbe7190d4344a2d0a61a46764e9, type: 2}
+  EnemyPrefabs:
+  - {fileID: 9144044523059303901, guid: fa266a19098ec2b4186f2b6670ace504, type: 3}
+  curretLevel: 0
 --- !u!4 &1766540587
 Transform:
   m_ObjectHideFlags: 0
