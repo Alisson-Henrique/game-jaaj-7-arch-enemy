@@ -11,6 +11,11 @@ public class GameController : MonoBehaviour
 
     public GameObject[] sceneryObejects;
 
+    public AudioClip[] BattleAudioClips;
+    public AudioClip[] CutsceneAudioClips;
+
+    public Sprite[] ilustrationSprites;
+
     public Color[] colorScenerys;
 
     public int curretLevel;
@@ -64,5 +69,15 @@ public class GameController : MonoBehaviour
     public Color GetColorScenery()
     {
         return colorScenerys[curretLevel];
+    }
+
+    public AudioClip GetCutsceneAudioClip()
+    {
+        return CutsceneAudioClips[curretLevel];
+    }
+
+    public Sprite GetIlustratio()
+    {
+        return ilustrationSprites[curretLevel];
     }
 }
