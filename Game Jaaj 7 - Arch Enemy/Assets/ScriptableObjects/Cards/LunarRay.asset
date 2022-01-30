@@ -21,4 +21,4 @@ MonoBehaviour:
     o advers\xE1rio durante alguns turnos."
   attckType: 0
   cooldown: 0
-  currentCooldwon: 0
+  currentCooldwon: 2

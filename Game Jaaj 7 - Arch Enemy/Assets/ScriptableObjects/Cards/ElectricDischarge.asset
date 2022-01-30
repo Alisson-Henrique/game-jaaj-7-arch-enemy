@@ -21,4 +21,4 @@ MonoBehaviour:
     que descargas poderosas possam ser disparadas contra o advers\xE1rio."
   attckType: 0
   cooldown: 0
-  currentCooldwon: 0
+  currentCooldwon: 2

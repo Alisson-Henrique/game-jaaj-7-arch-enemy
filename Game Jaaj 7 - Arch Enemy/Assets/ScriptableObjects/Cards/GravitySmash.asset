@@ -22,4 +22,4 @@ MonoBehaviour:
     perde agilidade."
   attckType: 0
   cooldown: 0
-  currentCooldwon: 0
+  currentCooldwon: 3

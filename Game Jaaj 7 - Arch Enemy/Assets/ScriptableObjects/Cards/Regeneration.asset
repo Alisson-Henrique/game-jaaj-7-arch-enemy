@@ -20,4 +20,4 @@ MonoBehaviour:
   description: "As c\xE9lulas do usu\xE1rio da carta s\xE3o revitalizadas e fortalecidas. "
   attckType: 1
   cooldown: 0
-  currentCooldwon: 0
+  currentCooldwon: 2

@@ -8,6 +8,8 @@ public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 public class BattleSystem : MonoBehaviour
 {
 	public GameObject panelHUD;
+	public GameObject fadeHUD;
+	public GameObject fadeUpHUD;
 
 	private GamePlayController gamePlayController;
 	private ButtonAttackBehaviour attackBehaviour;
@@ -30,6 +32,7 @@ public class BattleSystem : MonoBehaviour
 	public BattleState state;
 
 	public bool isDefense;
+	public bool isEnemyDefense;
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -65,12 +68,28 @@ public class BattleSystem : MonoBehaviour
 		yield return new WaitForSeconds(2f);
 		state = BattleState.PLAYERTURN;
 		PlayerTurn();
+
+		fadeUpHUD.GetComponent<Animator>().SetBool("isHiden", true);
+		fadeHUD.GetComponent<Animator>().SetBool("isHiden", true);
+		yield return new WaitForSeconds(2f);
+
+		fadeUpHUD.SetActive(false);
+		fadeHUD.SetActive(false);
 	}
 
 	IEnumerator PlayerAttack(Card card)
 	{
 		panelHUD.SetActive(false);
-		bool isDead = enemyUnit.TakeDamage(card.damage);
+
+		int damage = card.damage;
+
+		if (isEnemyDefense)
+		{
+			isEnemyDefense = false;
+			damage = Mathf.RoundToInt(damage - (damage * 0.5f));
+		}
+
+		bool isDead = enemyUnit.TakeDamage(damage);
 		dialogueText.text = card.cardName + " !!!";
 		enemyHUD.SetHP(enemyUnit.currentHP);
 
@@ -88,52 +107,17 @@ public class BattleSystem : MonoBehaviour
 		}
 	}
 
-	IEnumerator EnemyTurn(Card card)
-	{
-		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
-
-		yield return new WaitForSeconds(3f);
-
-		int damage = card.damage;
-
-		if (isDefense)
-        {
-			isDefense = false;
-			damage = Mathf.RoundToInt(damage - (damage * 0.5f));
-		}
-
-		bool isDead = playerUnit.TakeDamage(damage);
-		isDefense = false;
-		playerHUD.SetHP(playerUnit.currentHP);
-
-		yield return new WaitForSeconds(2f);
-
-		if (isDead)
-		{
-			state = BattleState.LOST;
-			StartCoroutine(EndBattle());
-		}
-		else
-		{
-			state = BattleState.PLAYERTURN;
-			panelHUD.SetActive(true);
-			attackBehaviour.Load();
-			PlayerTurn();
-		}
-		
-	}
-
 	IEnumerator EndBattle()
 	{
 		if (state == BattleState.WON)
 		{
-			dialogueText.text = "Voc� venceu!";
+			dialogueText.text = "Você venceu!";
 			yield return new WaitForSeconds(2f);
 			gameController.LevelUp();
 		}
 		else if (state == BattleState.LOST)
 		{
-			dialogueText.text = "Voc� perdeu...";
+			dialogueText.text = "Você perdeu...";
 			yield return new WaitForSeconds(2f);
 			gameController.Lost();
 		}
@@ -149,10 +133,10 @@ public class BattleSystem : MonoBehaviour
 	IEnumerator PlayerHeal(Card card)
 	{
 		panelHUD.SetActive(false);
-		playerUnit.Heal(card.damage);
+		playerUnit.Heal(Mathf.RoundToInt(playerUnit.maxHP - (playerUnit.maxHP * 0.5f)));
 
 		playerHUD.SetHP(playerUnit.currentHP);
-		dialogueText.text = "Voc� recuperou sua vida!";
+		dialogueText.text = "Você recuperou sua vida!";
 
 		yield return new WaitForSeconds(2f);
 
@@ -164,7 +148,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		panelHUD.SetActive(false);
 		isDefense = true;
-		dialogueText.text = "Voc� Prepara Defesa!";
+		dialogueText.text = "Você Prepara Defesa!";
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.ENEMYTURN;
@@ -232,5 +216,81 @@ public class BattleSystem : MonoBehaviour
 		Card choice = cards[Random.Range(0, cards.Length)];
 
 		StartCoroutine(EnemyTurn(choice));
+	}
+	IEnumerator EnemyTurn(Card card)
+	{
+		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
+
+		yield return new WaitForSeconds(3f);
+
+		switch (card.attckType)
+		{
+			case ATTACK_TYPE.Attack:
+				StartCoroutine(AttackEnemy(card));
+				break;
+			case ATTACK_TYPE.Defense:
+				StartCoroutine(DefenseEnemy());
+				break;
+			case ATTACK_TYPE.Heal:
+				StartCoroutine(HealEnemy(card));
+				break;
+		}
+
+	}
+
+	IEnumerator AttackEnemy(Card card)
+    {
+		int damage = card.damage;
+
+		if (isDefense)
+		{
+			isDefense = false;
+			damage = Mathf.RoundToInt(damage - (damage * 0.5f));
+		}
+
+		bool isDead = playerUnit.TakeDamage(damage);
+		isDefense = false;
+		playerHUD.SetHP(playerUnit.currentHP);
+
+		yield return new WaitForSeconds(2f);
+
+		if (isDead)
+		{
+			state = BattleState.LOST;
+			StartCoroutine(EndBattle());
+		}
+		else
+		{
+			state = BattleState.PLAYERTURN;
+			panelHUD.SetActive(true);
+			attackBehaviour.Load();
+			PlayerTurn();
+		}
+	}
+
+	IEnumerator HealEnemy(Card card)
+    {
+		enemyUnit.Heal(Mathf.RoundToInt(enemyUnit.maxHP - (enemyUnit.maxHP * 0.25f)));
+
+		enemyHUD.SetHP(enemyUnit.currentHP);
+		dialogueText.text = enemyUnit.unitName + " recuperou a vida!";
+
+		yield return new WaitForSeconds(2f);
+
+		state = BattleState.PLAYERTURN;
+		panelHUD.SetActive(true);
+		attackBehaviour.Load();
+		PlayerTurn();
+	}
+
+	IEnumerator DefenseEnemy()
+    {
+		isEnemyDefense = true;
+		yield return new WaitForSeconds(2f);
+
+		state = BattleState.PLAYERTURN;
+		panelHUD.SetActive(true);
+		attackBehaviour.Load();
+		PlayerTurn();
 	}
 }
