@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef4f26b65fee3c842b532d24bcde3a0b, type: 3}
+  m_Name: 02
+  m_EditorClassIdentifier: 
+  illustration: {fileID: 0}
+  sentences:
+  - "[NOME_2] fugiu, destruindo parte do nosso pequeno laborat\xF3rio."
+  - Durante algumas semanas procurei desesperadamente por meu amigo, sem sucesso
+  - "[NOME_2] desaparecer\xE1..."
+  - "Aos poucos me acostumei com a aus\xEAncia de [NOME_2]"
+  - "No entanto, o entusiasmo que alimentava meus experimentos foi substitu\xEDdo
+    por uma estranha sensa\xE7\xE3o de sobriedade vazia e medo."
+  - Nos anos que se seguiram tive a oportunidade de estudar em Paris, e conhecer
+    as luzes mais brilhantes dos nossos tempos.
+  - "Al\xE9m dos estudos, as festas tamb\xE9m faziam parte do meu dia-a-dia."
+  - "Eu cheguei l\xE1; era um iluminado. Mas a fria escurid\xE3o n\xE3o tardaria
+    de voltar..."
+  - "Uma carta de minha terra natal, de meus pais, contava sobre a morte violenta
+    de um parente pr\xF3ximo."
+  - "Uma morte, ali\xE1s muito semelhante a algumas outras que haviam come\xE7ado
+    a ocorrer pouco antes."
+  - Era um convite para o funeral...
+  - "Malditas sombras... sempre agarradas aos nossos p\xE9s, nos perseguindo..."
+  - Malditas sombras!
+  - "Estar em G\xE9vaudan \xE9 sempre afogar o cora\xE7\xE3o num mar cinzento de
+    luto."
+  - "Acreditava que as muitas milhas que separam Paris deste lugar me protegeriam
+    deve vento miasm\xE1tico"
+  - "Minhas reflex\xF5es l\xFAgubres foram interrompidas por uma imagem perturbadora"
+  - "Olhos verdes cintilavam na escurid\xE3o da floresta que se avizinhava"
+  - "O passado me espreitava... e eu teria de enfrent\xE1-lo."

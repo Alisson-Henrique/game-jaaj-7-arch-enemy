@@ -12,7 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef4f26b65fee3c842b532d24bcde3a0b, type: 3}
   m_Name: 01
   m_EditorClassIdentifier: 
+  illustration: {fileID: 0}
   sentences:
-  - "G\xE9vaudan \xE9 um canto esquecido do mundo, imerso nas sombras."
-  - "Eu, Torgate, e meu amigo Jo\xE3o, mais do que qualquer pessoa naquela fim de
-    mundo, esper\xE1vamos ansiosamente pelo fim da escurid\xE3o."
+  - "Em nosso pequeno laborat\xF3rio, singelos experimentos sinalizavam um futuro
+    brilhante... est\xE1vamos t\xE3o esperan\xE7osos! "
+  - "Eu, Nathaniel, e meu amigo [NOME_2], mais do que qualquer pessoa naquela fim
+    de mundo, esper\xE1vamos ansiosamente pelo fim da escurid\xE3o."
+  - "T\xEDnhamos grandes planos, sonh\xE1vamos em descobrir algo que beneficiasse
+    n\xE3o s\xF3 nossa terra, como tamb\xE9m o mundo."
+  - "Em nosso pequeno laborat\xF3rio, singelos experimentos sinalizavam um futuro
+    brilhante... est\xE1vamos t\xE3o esperan\xE7osos! "
+  - "Todo nosso entusiasmo, no entanto, foi nossa ru\xEDna..."
+  - "\"[NOME_2], nossas belas ideias n\xE3o podem dissipar silenciosamente em nossos
+    cora\xE7\xF5es... devemos p\xF4-las em pr\xE1tica!\""
+  - "\"Sim, Nathaniel, sim! Mas como poder\xEDamos? N\xE3o seriam muito arriscadas?\""
+  - "\"Talvez, meu caro [NOME_2], mas o futuro pede que nos arrisquemos: experimentaremos
+    nossas cria\xE7\xF5es! Eu experimentarei as suas e voc\xEA experimentar\xE1 as
+    minhas...\""
+  - "[NOME_2], hesitante, concordou. E assim nos tornamos as cobaias de n\xF3s mesmos..."
