@@ -55,7 +55,7 @@ public class BattleSystem : MonoBehaviour
 		enemyUnit = enemyGO.GetComponent<Unit>();
 
 
-		dialogueText.text = "Você enfrentara " + enemyUnit.unitName + "...";
+		dialogueText.text = "Vocï¿½ enfrentara " + enemyUnit.unitName + "...";
 		attackBehaviour = FindObjectOfType(typeof(ButtonAttackBehaviour)) as ButtonAttackBehaviour;
 
 		attackBehaviour.setup();
@@ -92,7 +92,6 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator EnemyTurn(Card card)
 	{
-		bool con = true;
 		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
 
 		yield return new WaitForSeconds(3f);
@@ -130,13 +129,13 @@ public class BattleSystem : MonoBehaviour
 	{
 		if (state == BattleState.WON)
 		{
-			dialogueText.text = "Você venceu!";
+			dialogueText.text = "Vocï¿½ venceu!";
 			yield return new WaitForSeconds(2f);
 			gameController.LevelUp();
 		}
 		else if (state == BattleState.LOST)
 		{
-			dialogueText.text = "Você perdeu...";
+			dialogueText.text = "Vocï¿½ perdeu...";
 			yield return new WaitForSeconds(2f);
 			gameController.Lost();
 		}
@@ -155,7 +154,7 @@ public class BattleSystem : MonoBehaviour
 		playerUnit.Heal(card.damage);
 
 		playerHUD.SetHP(playerUnit.currentHP);
-		dialogueText.text = "Você recuperou sua vida!";
+		dialogueText.text = "Vocï¿½ recuperou sua vida!";
 
 		yield return new WaitForSeconds(2f);
 
@@ -167,7 +166,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		panelHUD.SetActive(false);
 		isDefense = true;
-		dialogueText.text = "Você Prepara Defesa!";
+		dialogueText.text = "Vocï¿½ Prepara Defesa!";
 		yield return new WaitForSeconds(2f);
 
 		state = BattleState.ENEMYTURN;
