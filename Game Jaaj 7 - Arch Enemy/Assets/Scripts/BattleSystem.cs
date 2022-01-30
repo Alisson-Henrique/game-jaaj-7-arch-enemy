@@ -16,7 +16,7 @@ public class BattleSystem : MonoBehaviour
 	private GameController gameController;
 
 	public GameObject playerPrefab;
-	public GameObject enemyPrefab;
+	private GameObject enemyPrefab;
 
 	public Transform playerBattleStation;
 	public Transform enemyBattleStation;
@@ -50,10 +50,10 @@ public class BattleSystem : MonoBehaviour
 
 	IEnumerator SetupBattle()
 	{
-		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation.position, playerBattleStation.localRotation);
+		GameObject playerGO = Instantiate(playerPrefab, playerBattleStation.position + playerPrefab.transform.position, playerBattleStation.localRotation);
 		playerUnit = playerGO.GetComponent<Unit>();
 
-		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation.position, enemyBattleStation.localRotation);
+		GameObject enemyGO = Instantiate(enemyPrefab, enemyBattleStation.position + enemyPrefab.transform.position, enemyBattleStation.localRotation);
 		enemyUnit = enemyGO.GetComponent<Unit>();
 
 
