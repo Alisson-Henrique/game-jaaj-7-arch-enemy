@@ -17,8 +17,8 @@ MonoBehaviour:
   damage: 20
   CriticalChance: 0
   border: {fileID: 21300000, guid: 3e26fc4997d402f41bf70221732fae8a, type: 3}
-  description: "Eletricidade dos c\xE9us energiza o portador da carta, fortalecendo,
-    e permite que descargas poderosas possam ser disparadas contra o advers\xE1rio."
+  description: "Eletricidade dos c\xE9us energiza o portador da carta, permitindo
+    que descargas poderosas possam ser disparadas contra o advers\xE1rio."
   attckType: 0
   cooldown: 0
   currentCooldwon: 0

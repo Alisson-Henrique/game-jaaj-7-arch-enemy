@@ -17,7 +17,7 @@ MonoBehaviour:
   damage: 70
   CriticalChance: 0
   border: {fileID: 21300000, guid: 103307dedb634e147ad00dcc04a4ab57, type: 3}
-  description: "Ventos solares e explos\xF5es c\xF3smicas causam grandes danos no
+  description: "Ventos solares e explos\xF5es c\xF3smicas causam grandes danos ao
     advers\xE1rio, no entanto afetam a vitalidade do usu\xE1rio da carta."
   attckType: 0
   cooldown: 0
