@@ -12,7 +12,18 @@ public class CutsceneController : MonoBehaviour
 
     private GameController gameController;
 
-    public Image ilustrationSprite;
+    public GameObject SkipButton;
+
+    public GameObject panelDead;
+
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            gameController.NextScene("Gameplay");
+        }
+    }
 
     public void PlayFadeOut()
     {
@@ -29,8 +40,15 @@ public class CutsceneController : MonoBehaviour
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         audioSource = GetComponent<AudioSource>();
 
+        SkipButton.SetActive(true);
+
+        if (gameController.isDead)
+        {
+            panelDead.SetActive(true);
+            SkipButton.SetActive(false);
+        }
+
         audioSource.clip = gameController.GetCutsceneAudioClip();
-        ilustrationSprite.sprite = gameController.GetIlustratio();
         audioSource.Play();
         
     }

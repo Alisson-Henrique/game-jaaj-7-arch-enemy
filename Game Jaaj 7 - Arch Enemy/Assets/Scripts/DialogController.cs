@@ -18,7 +18,7 @@ public class DialogController : MonoBehaviour
     private Dialog dialog;
 
     [SerializeField]
-    private Sprite illustration;
+    private Image illustration;
     private int index;
 
     public string nextScene;
@@ -27,21 +27,24 @@ public class DialogController : MonoBehaviour
     {
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         cutsceneController = FindObjectOfType(typeof(CutsceneController)) as CutsceneController;
+
         DialogTxt.text = "";
+
         dialog = new Dialog();
 
         if (!gameController.isDead){
             dialog = gameController.cutcenesDialogs[gameController.curretLevel];
         }
-        
+        illustration.sprite = gameController.GetIlustratio();
         sentences = dialog.sentences;
 
         if (sentences?.Length > 0)
         {
             index = 0;
+            illustration.sprite = dialog.illustration;
             StartCoroutine("ShowDialog");
         }
-        illustration = dialog.illustration;
+        
     }
 
     IEnumerator ShowDialog()

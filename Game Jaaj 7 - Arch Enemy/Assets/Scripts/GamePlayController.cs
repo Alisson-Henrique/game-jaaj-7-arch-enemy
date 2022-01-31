@@ -57,10 +57,13 @@ public class GamePlayController : MonoBehaviour
 
         StartAudio();
 
-        for (int i = 0; i < 2; i++)
+        while (true)
         {
-            int t = Random.Range(0, cards.Length);
-            options[i] = cards[t];
+            sortCrad();
+            if (options[0].cardName != options[1].cardName)
+            {
+                break;
+            }
         }
 
         choiceContent01.sprite = options[0].image;
@@ -77,6 +80,15 @@ public class GamePlayController : MonoBehaviour
         sceneryObeject = gameController.GetScenery();
         GameObject temp = Instantiate(sceneryObeject, sceneryPosition.position + sceneryObeject.transform.position, sceneryPosition.localRotation);
         cameraScenery.backgroundColor = gameController.GetColorScenery();
+    }
+
+    public void sortCrad()
+    {
+        for (int i = 0; i < 2; i++)
+        {
+            int t = Random.Range(0, cards.Length);
+            options[i] = cards[t];
+        }
     }
 
     public void StartAudio()

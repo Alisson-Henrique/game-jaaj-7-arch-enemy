@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     public void LevelUp()
     {
         curretLevel++;
-        if(curretLevel == 4)
+        if(curretLevel == 3)
         {
             SceneManager.LoadScene("Credits");
         }
@@ -78,7 +78,7 @@ public class GameController : MonoBehaviour
     {
         if (isDead)
         {
-            return ilustrationSprites[4];
+            return ilustrationSprites[3];
         }
 
         return ilustrationSprites[curretLevel];
