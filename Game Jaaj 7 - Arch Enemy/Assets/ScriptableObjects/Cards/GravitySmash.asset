@@ -21,5 +21,5 @@ MonoBehaviour:
     grande dano. No entanto, em decorr\xEAncia do enorme peso o usu\xE1rio da carta
     perde agilidade."
   attckType: 0
-  cooldown: 3
+  cooldown: 4
   currentCooldwon: 0

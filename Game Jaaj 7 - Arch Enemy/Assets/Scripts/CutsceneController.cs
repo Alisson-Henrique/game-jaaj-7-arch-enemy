@@ -28,8 +28,10 @@ public class CutsceneController : MonoBehaviour
     {
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         audioSource = GetComponent<AudioSource>();
+
         audioSource.clip = gameController.GetCutsceneAudioClip();
         ilustrationSprite.sprite = gameController.GetIlustratio();
         audioSource.Play();
+        
     }
 }

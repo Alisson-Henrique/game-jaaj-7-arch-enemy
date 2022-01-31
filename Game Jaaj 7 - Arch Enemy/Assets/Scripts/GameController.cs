@@ -20,22 +20,13 @@ public class GameController : MonoBehaviour
 
     public int curretLevel;
 
+    public bool isDead;
+
     private int nextScene;
 
     private void Awake()
     {
         DontDestroyOnLoad(this.gameObject);
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     public void NextScene(string sceneName)
@@ -58,7 +49,8 @@ public class GameController : MonoBehaviour
 
     public void Lost()
     {
-        SceneManager.LoadScene("Gameplay");
+        isDead = true;
+        SceneManager.LoadScene("Cutscene");
     }
 
     public GameObject GetScenery()
@@ -73,11 +65,22 @@ public class GameController : MonoBehaviour
 
     public AudioClip GetCutsceneAudioClip()
     {
+        if (isDead)
+        {
+            return CutsceneAudioClips[4];
+        }
+
+
         return CutsceneAudioClips[curretLevel];
     }
 
     public Sprite GetIlustratio()
     {
+        if (isDead)
+        {
+            return ilustrationSprites[4];
+        }
+
         return ilustrationSprites[curretLevel];
     }
 
