@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 3326471930666499263}
   - component: {fileID: 3326471930666499262}
   - component: {fileID: 3326471930666499257}
-  - component: {fileID: 7822904607835431373}
   m_Layer: 0
   m_Name: ElectricDischargeVFX
   m_TagString: Untagged
@@ -4872,31 +4871,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &7822904607835431373
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3326471930666499256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef2ab9af074f91f44a4e9e51a9057cbc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vfxName: Thunder
-  a:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2

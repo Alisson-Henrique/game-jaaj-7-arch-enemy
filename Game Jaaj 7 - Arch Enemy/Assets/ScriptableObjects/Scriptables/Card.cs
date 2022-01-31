@@ -17,4 +17,6 @@ public class Card : ScriptableObject
     public ATTACK_TYPE attckType;
     public int cooldown;
     public int currentCooldwon;
+    public GameObject cardVFX;
+    public int target;
 }

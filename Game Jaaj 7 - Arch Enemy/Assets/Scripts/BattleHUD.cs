@@ -16,6 +16,9 @@ public class BattleHUD : MonoBehaviour
 
 	public GameObject cardVFX;
 
+	public GameObject hunter;
+	public GameObject monster;
+
 	public void SetHUD(Unit unit)
 	{
 		// nameText.text = unit.unitName;
@@ -39,11 +42,18 @@ public class BattleHUD : MonoBehaviour
 		selectedCard.GetComponent<Image>().sprite = card.image;
 		selectedBorder.sprite = card.border;
 
-		var cardVFXInstance = Instantiate(cardVFX);
+		var cardSelectionVFX = Instantiate(cardVFX);
 		yield return new WaitForSeconds(2f);
-		Destroy(cardVFXInstance); 
-
+		Destroy(cardSelectionVFX);	
 		selectedCard.SetActive(false);
+
+		// if (card.cardVFX != null)
+		// {
+		// 	var cardAnimationVFXTransform = card.target == 0 ? hunter.transform : monster.transform;
+		// 	var cardAnimationVFX = Instantiate(card.cardVFX);
+		// 	yield return new WaitForSeconds(4f);
+		// 	Destroy(cardAnimationVFX); 
+		// }
 	}
 
 }

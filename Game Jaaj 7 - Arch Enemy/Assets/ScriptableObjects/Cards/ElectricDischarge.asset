@@ -22,3 +22,4 @@ MonoBehaviour:
   attckType: 0
   cooldown: 2
   currentCooldwon: 0
+  cardVFX: {fileID: 3326471930666499256, guid: 35c83db7e5a0677489e0e0c5ce0e8214, type: 3}

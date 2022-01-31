@@ -159,6 +159,8 @@ MonoBehaviour:
   selectedCard: {fileID: 85672489}
   selectedBorder: {fileID: 1912031354}
   cardVFX: {fileID: 6981631292799607645, guid: 326b75c893d3e6847a724f422029097c, type: 3}
+  hunter: {fileID: 250224049}
+  monster: {fileID: 504170526}
 --- !u!4 &17388376
 Transform:
   m_ObjectHideFlags: 0
@@ -3905,6 +3907,8 @@ MonoBehaviour:
   selectedCard: {fileID: 85672489}
   selectedBorder: {fileID: 1912031354}
   cardVFX: {fileID: 6981631292799607645, guid: 326b75c893d3e6847a724f422029097c, type: 3}
+  hunter: {fileID: 250224049}
+  monster: {fileID: 504170526}
 --- !u!4 &1335931695
 Transform:
   m_ObjectHideFlags: 0
