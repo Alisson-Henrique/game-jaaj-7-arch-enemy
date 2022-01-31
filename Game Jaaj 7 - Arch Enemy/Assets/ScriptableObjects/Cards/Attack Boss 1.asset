@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bab38ba2af0d4e14d9499eefed2a798e, type: 3}
   m_Name: Attack Boss 1
   m_EditorClassIdentifier: 
-  cardName: Ataque
+  cardName: "Ataque B\xE1sico"
   image: {fileID: 21300000, guid: 03ff75520cda6c145848cf381ea54ba3, type: 3}
   damage: 15
   CriticalChance: 0

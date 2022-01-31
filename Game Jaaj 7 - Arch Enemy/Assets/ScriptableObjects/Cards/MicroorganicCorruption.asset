@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: "Corrup\xE7\xE3o Micro-org\xE2nica"
   image: {fileID: 21300000, guid: a627f98a0c7b3c94f8a38d66b4dbaded, type: 3}
-  damage: 10
+  damage: 25
   CriticalChance: 0
   border: {fileID: 21300000, guid: d5841812ff05b2049b3303a7694a0ecf, type: 3}
   description: "Uma carga abundante de micr\xF3bios \xE9 injetada no advers\xE1rio,

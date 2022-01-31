@@ -7,6 +7,7 @@ public class MainMenuController : MonoBehaviour
 {
     [SerializeField]
     private GameObject FadeOut;
+
     public void Play()
     {
         SceneManager.LoadScene("Cutscene");
@@ -21,6 +22,5 @@ public class MainMenuController : MonoBehaviour
     {
         FadeOut.SetActive(true);
         Invoke("Play", 3f);
-
     }
 }

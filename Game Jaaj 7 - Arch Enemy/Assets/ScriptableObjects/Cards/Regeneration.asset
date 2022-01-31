@@ -19,6 +19,6 @@ MonoBehaviour:
   border: {fileID: 21300000, guid: d5841812ff05b2049b3303a7694a0ecf, type: 3}
   description: "As c\xE9lulas do usu\xE1rio da carta s\xE3o revitalizadas e fortalecidas. "
   attckType: 1
-  cooldown: 2
+  cooldown: 4
   currentCooldwon: 0
   cardVFX: {fileID: 8122911130008712168, guid: f75c217e7c80df54a86e200e52dc7578, type: 3}

@@ -28,16 +28,24 @@ public class DialogController : MonoBehaviour
         gameController = FindObjectOfType(typeof(GameController)) as GameController;
         cutsceneController = FindObjectOfType(typeof(CutsceneController)) as CutsceneController;
         DialogTxt.text = "";
-        dialog = gameController.cutcenesDialogs[gameController.curretLevel];
+        dialog = new Dialog();
+
+        if (!gameController.isDead){
+            dialog = gameController.cutcenesDialogs[gameController.curretLevel];
+        }
+        
         sentences = dialog.sentences;
-        index = 0;
-        StartCoroutine("ShowDialog");
+
+        if (sentences?.Length > 0)
+        {
+            index = 0;
+            StartCoroutine("ShowDialog");
+        }
+        illustration = dialog.illustration;
     }
 
     IEnumerator ShowDialog()
     {
-        illustration = dialog.illustration;
-
         foreach (char c in sentences[index].ToCharArray()){
             DialogTxt.text += c;
             yield return new WaitForSeconds(0.05f);
