@@ -14,6 +14,8 @@ public class BattleHUD : MonoBehaviour
 	public GameObject selectedCard;
 	public Image selectedBorder;
 
+	public GameObject cardVFX;
+
 	public void SetHUD(Unit unit)
 	{
 		// nameText.text = unit.unitName;
@@ -36,7 +38,11 @@ public class BattleHUD : MonoBehaviour
 		selectedCard.SetActive(true);
 		selectedCard.GetComponent<Image>().sprite = card.image;
 		selectedBorder.sprite = card.border;
+
+		var cardVFXInstance = Instantiate(cardVFX);
 		yield return new WaitForSeconds(2f);
+		Destroy(cardVFXInstance); 
+
 		selectedCard.SetActive(false);
 	}
 
