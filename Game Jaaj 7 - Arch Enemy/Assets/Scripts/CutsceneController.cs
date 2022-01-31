@@ -21,6 +21,7 @@ public class CutsceneController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            gameController.isDead = false;
             gameController.NextScene("Gameplay");
         }
     }
@@ -50,6 +51,5 @@ public class CutsceneController : MonoBehaviour
 
         audioSource.clip = gameController.GetCutsceneAudioClip();
         audioSource.Play();
-        
     }
 }

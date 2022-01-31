@@ -35,7 +35,7 @@ public class DialogController : MonoBehaviour
         if (!gameController.isDead){
             dialog = gameController.cutcenesDialogs[gameController.curretLevel];
         }
-        illustration.sprite = gameController.GetIlustratio();
+        
         sentences = dialog.sentences;
 
         if (sentences?.Length > 0)
@@ -43,6 +43,10 @@ public class DialogController : MonoBehaviour
             index = 0;
             illustration.sprite = dialog.illustration;
             StartCoroutine("ShowDialog");
+        }
+        else
+        {
+            illustration.sprite = gameController.GetIlustrationDead();
         }
         
     }

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: "Ataque B\xE1sico"
   image: {fileID: 21300000, guid: 03ff75520cda6c145848cf381ea54ba3, type: 3}
-  damage: 10
+  damage: 15
   CriticalChance: 0
   border: {fileID: 21300000, guid: 24a14952b3c85df4ab00abbb7b88de15, type: 3}
   description: "Este \xE9 o movimento ofensivo mas simples que pode ser executado.
@@ -22,3 +22,5 @@ MonoBehaviour:
   attckType: 0
   cooldown: 0
   currentCooldwon: 0
+  cardVFX: {fileID: 0}
+  target: 0

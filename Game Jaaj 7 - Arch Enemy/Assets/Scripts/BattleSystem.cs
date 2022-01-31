@@ -136,7 +136,7 @@ public class BattleSystem : MonoBehaviour
 	{
 		playerHUD.SetCardSelected(card);
 		panelHUD.SetActive(false);
-		playerUnit.Heal(Mathf.RoundToInt(playerUnit.maxHP - (playerUnit.maxHP * 0.5f)));
+		playerUnit.Heal(Mathf.RoundToInt(playerUnit.maxHP * 0.5f));
 
 		playerHUD.SetHP(playerUnit.currentHP);
 		dialogueText.text = "Você recuperou sua vida!";
@@ -276,7 +276,7 @@ public class BattleSystem : MonoBehaviour
     {
 		dialogueText.text = enemyUnit.unitName + " Usou " + card.cardName + " !!!";
 		enemyHUD.SetCardSelected(card);
-		enemyUnit.Heal(Mathf.RoundToInt(enemyUnit.maxHP - (enemyUnit.maxHP * 0.25f)));
+		enemyUnit.Heal(Mathf.RoundToInt(enemyUnit.maxHP * 0.25f));
 
 		enemyHUD.SetHP(enemyUnit.currentHP);
 		dialogueText.text = enemyUnit.unitName + " recuperou a vida!";

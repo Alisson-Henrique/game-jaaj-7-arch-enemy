@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardName: "Tempestade C\xF3smica"
   image: {fileID: 21300000, guid: 92608efde9faf0745ab55030378fe0d2, type: 3}
-  damage: 70
+  damage: 60
   CriticalChance: 0
   border: {fileID: 21300000, guid: 103307dedb634e147ad00dcc04a4ab57, type: 3}
   description: "Ventos solares e explos\xF5es c\xF3smicas causam grandes danos ao
     advers\xE1rio, no entanto afetam a vitalidade do usu\xE1rio da carta."
   attckType: 0
-  cooldown: 2
+  cooldown: 4
   currentCooldwon: 0
+  cardVFX: {fileID: 0}
+  target: 0

@@ -76,11 +76,6 @@ public class GameController : MonoBehaviour
 
     public Sprite GetIlustratio()
     {
-        if (isDead)
-        {
-            return ilustrationSprites[3];
-        }
-
         return ilustrationSprites[curretLevel];
     }
 
@@ -92,5 +87,10 @@ public class GameController : MonoBehaviour
     public AudioClip GetBattleAudioClip()
     {
         return BattleAudioClips[curretLevel];
+    }
+
+    public Sprite GetIlustrationDead()
+    {
+        return ilustrationSprites[3];
     }
 }
